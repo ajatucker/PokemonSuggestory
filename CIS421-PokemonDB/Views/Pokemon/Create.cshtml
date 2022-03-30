@@ -1,0 +1,53 @@
+﻿@model CIS421_PokemonDB.Models.Pokemon
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Pokemon</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="pokemonName" class="control-label"></label>
+                <input asp-for="pokemonName" class="form-control" />
+                <span asp-validation-for="pokemonName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="pokemonType" class="control-label"></label>
+                <input asp-for="pokemonType" class="form-control" />
+                <span asp-validation-for="pokemonType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="priorEvol" class="control-label"></label>
+                <input asp-for="priorEvol" class="form-control" />
+                <span asp-validation-for="priorEvol" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="nextEvol" class="control-label"></label>
+                <input asp-for="nextEvol" class="form-control" />
+                <span asp-validation-for="nextEvol" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="imgPath" class="control-label"></label>
+                <input asp-for="imgPath" class="form-control" />
+                <span asp-validation-for="imgPath" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
