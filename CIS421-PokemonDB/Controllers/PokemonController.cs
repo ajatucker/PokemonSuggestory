@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using CIS421_PokemonDB.Data;
 using CIS421_PokemonDB.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CIS421_PokemonDB.Controllers
 {
@@ -24,6 +25,17 @@ namespace CIS421_PokemonDB.Controllers
         {
             return View(await _context.Pokemon.ToListAsync());
         }
+        // GET: Pokemon/ShowSearchForm
+        public IActionResult ShowSearchForm()
+        {
+            return View();
+        }
+        // Post: Pokemon/ShowSearchResults
+        public async Task<IActionResult> ShowSearchResults(String SearchPhrase)
+        {
+            return View("Index", await _context.Pokemon.Where( j => j.pokemonName.Contains(SearchPhrase)).ToListAsync());
+        }
+
 
         // GET: Pokemon/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -44,6 +56,8 @@ namespace CIS421_PokemonDB.Controllers
         }
 
         // GET: Pokemon/Create
+
+        //[Authorize]
         public IActionResult Create()
         {
             return View();
@@ -52,6 +66,7 @@ namespace CIS421_PokemonDB.Controllers
         // POST: Pokemon/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        //[Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("id,pokemonName,pokemonType,priorEvol,nextEvol,imgPath")] Pokemon pokemon)
@@ -66,6 +81,7 @@ namespace CIS421_PokemonDB.Controllers
         }
 
         // GET: Pokemon/Edit/5
+        //[Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -84,6 +100,7 @@ namespace CIS421_PokemonDB.Controllers
         // POST: Pokemon/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        //[Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("id,pokemonName,pokemonType,priorEvol,nextEvol,imgPath")] Pokemon pokemon)
@@ -117,6 +134,7 @@ namespace CIS421_PokemonDB.Controllers
         }
 
         // GET: Pokemon/Delete/5
+        /**[Authorize]**/
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -135,6 +153,7 @@ namespace CIS421_PokemonDB.Controllers
         }
 
         // POST: Pokemon/Delete/5
+        //[Authorize]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
