@@ -17,8 +17,8 @@ namespace CIS421_PokemonDB.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     pokemonName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     pokemonType = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    priorEvol = table.Column<int>(type: "int", nullable: false),
-                    nextEvol = table.Column<int>(type: "int", nullable: false),
+                    priorEvol = table.Column<int>(type: "int", nullable: true),
+                    nextEvol = table.Column<int>(type: "int", nullable: true),
                     imgPath = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
