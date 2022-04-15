@@ -69,7 +69,7 @@ namespace CIS421_PokemonDB.Controllers
         //[Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,pokemonName,pokemonType,priorEvol,nextEvol,imgPath")] Pokemon pokemon)
+        public async Task<IActionResult> Create([Bind("id,pokemonNumber,pokemonName,pokemonDesc,pokemonType,priorEvol,nextEvol,imgPath")] Pokemon pokemon)
         {
             if (ModelState.IsValid)
             {
@@ -103,7 +103,7 @@ namespace CIS421_PokemonDB.Controllers
         //[Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("id,pokemonName,pokemonType,priorEvol,nextEvol,imgPath")] Pokemon pokemon)
+        public async Task<IActionResult> Edit(int id, [Bind("id,pokemonNumber,pokemonName,pokemonDesc,pokemonType,priorEvol,nextEvol,imgPath")] Pokemon pokemon)
         {
             if (id != pokemon.id)
             {
