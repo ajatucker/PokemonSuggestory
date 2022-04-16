@@ -16,27 +16,14 @@
             <th>
                 @Html.DisplayNameFor(model => model.id)
             </th>
+
             <th>
-                @Html.DisplayNameFor(model => model.pokemonNumber)
+                @Html.DisplayNameFor(model => model.pName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.pokemonName)
+                @Html.DisplayNameFor(model => model.pDesc)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.pokemonDesc)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.pokemonType)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.priorEvol)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.nextEvol)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.imgPath)
-            </th>
+
             <th></th>
         </tr>
     </thead>
@@ -47,20 +34,12 @@
                 @Html.DisplayFor(modelItem => item.id)
             
             <td>
-                @Html.DisplayFor(modelItem => item.pokemonName)
+                @Html.DisplayFor(modelItem => item.pName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.pokemonType)
+                @Html.DisplayFor(modelItem => item.pDesc)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.priorEvol)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.nextEvol)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.imgPath)
-            </td>
+ 
             <td>
                 <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.id">Details</a> |

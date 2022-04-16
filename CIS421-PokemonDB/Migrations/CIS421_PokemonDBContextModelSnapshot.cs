@@ -28,12 +28,12 @@ namespace CIS421_PokemonDB.Migrations
                     b.Property<int>("pokemonNumber")
                         .HasColumnType("int");
 
-                    b.Property<string>("pokemonName")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<string>("pName")
+                        .HasColumnType("varchar(32)");
 
-                    b.Property<string>("pokemonDesc")
-                        .HasColumnType("nvarchar(max)");
-
+                    b.Property<string>("pDesc")
+                        .HasColumnType("text");
+                    /*
                     b.Property<string>("pokemonType")
                         .HasColumnType("nvarchar(max)");
 
@@ -45,7 +45,7 @@ namespace CIS421_PokemonDB.Migrations
 
                     b.Property<string>("imgPath")
                         .HasColumnType("nvarchar(max)");
-
+                    */
                     b.HasKey("id");
 
                     b.ToTable("Pokemon");

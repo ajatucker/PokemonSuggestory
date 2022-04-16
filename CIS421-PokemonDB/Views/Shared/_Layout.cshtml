@@ -7,40 +7,37 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
-<body>
-    <div class="sidebar mb-3">
-        <nav class="navbar navbar-light bg-light ">
-            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Pokemon Suggestory</a>
-            <div class="container-fluid">
-                <ul class="nav flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Pokemon" asp-action="Index">Pokemon</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Pokemon" asp-action="ShowSearchForm">Search</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+<body class="bg-light">
+    <div class="navbar flex-column navbar-custom navbar-light bg-danger align-content-center">
+        @*<nav class="navbar navbar-light">*@
+        <a class="nav" asp-area="" asp-controller="Home" asp-action="Index"><h1 class="text-dark">Pokemon Suggestory</h1></a>
+        @*<div class="navbar-custom">*@
+        <ul class="nav nav-pills ">
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><h2>Home</h2></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Pokemon" asp-action="Index"><h2>Pokemon</h2></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Pokemon" asp-action="ShowSearchForm"><h2>Search</h2></a>
+            </li>
+        </ul>
+        @*</div>*@
+        @* </nav>*@
     </div>
-      
-    <div class="container alignment">
 
+    <div class="container align-content-center">
+        <img src="pokeball.png" alt="img" style="max-width: 20px; max-height: 24px"/>
         <main role="main" class="pb-3">
-            
+
             @RenderBody()
         </main>
     </div>
 
     <footer class="border-top footer text-muted">
-        <div class="container alignment">
-            &copy; 2022 - CIS421_PokemonDB - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        <div class="container align-content-md-end">
+            &copy; 2022 - Pokemon Suggestory - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

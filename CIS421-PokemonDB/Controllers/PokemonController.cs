@@ -33,7 +33,7 @@ namespace CIS421_PokemonDB.Controllers
         // Post: Pokemon/ShowSearchResults
         public async Task<IActionResult> ShowSearchResults(String SearchPhrase)
         {
-            return View("Index", await _context.Pokemon.Where( j => j.pokemonName.Contains(SearchPhrase)).ToListAsync());
+            return View("Index", await _context.Pokemon.Where( j => j.pName.Contains(SearchPhrase)).ToListAsync());
         }
 
 
@@ -69,7 +69,7 @@ namespace CIS421_PokemonDB.Controllers
         //[Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,pokemonNumber,pokemonName,pokemonDesc,pokemonType,priorEvol,nextEvol,imgPath")] Pokemon pokemon)
+        public async Task<IActionResult> Create([Bind("id,pName,pDesc")] Pokemon pokemon)
         {
             if (ModelState.IsValid)
             {
@@ -103,7 +103,7 @@ namespace CIS421_PokemonDB.Controllers
         //[Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("id,pokemonNumber,pokemonName,pokemonDesc,pokemonType,priorEvol,nextEvol,imgPath")] Pokemon pokemon)
+        public async Task<IActionResult> Edit(int id, [Bind("id,pName,pDesc")] Pokemon pokemon)
         {
             if (id != pokemon.id)
             {

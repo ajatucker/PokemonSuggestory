@@ -2,12 +2,38 @@
 for details on configuring this project to bundle and minify static web assets. */
 
 
+/*
 
-.flex-container {
+flex-shrink-0 {
+    flex-shrink: 0;
+}
+
+d-flex {
     display: flex;
+}
+
+flex-column {
     flex-direction: column;
 }
 
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-left: 0;
+    list-style: none;
+}
+*/
+
+navbar-custom {
+    background-color: firebrick;
+    display: inline-block;
+    margin-left: 0;
+    margin-top: 0;
+    height: 100%;
+    /*left: 200px;  just an estimate of your sidebar's width */
+    width: 200px;
+}
 
 /* The sidebar menu 
 sidebar {
@@ -34,13 +60,13 @@ sidebar a {
         */
         /* When you mouse over the navigation links, change their color */
 sidebar a:hover {
-  color: #f1f1f1;
+  color: #808080;
 }
 
 /* Style page content */
 main {
-    margin-left: 160px;  Same as the width of the sidebar 
-    padding: 0px 10px;
+    /*margin-left: 160px;   Same as the width of the sidebar */
+    padding: 10px 10px 10px 10px inherit;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) 
@@ -54,11 +80,6 @@ main {
     }
 }
     */
-a.navbar-brand {
-    white-space: normal;
-    text-align: center;
-    word-break: break-all;
-}
 
 
 /*a {
@@ -73,22 +94,18 @@ a.navbar-brand {
     background-color: #fff;
     padding-top: 20px;
 }*/
-
-alignment{
-    margin-left: 200px;
-}
     
 
 .btn-primary {
   color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+  background-color: #fff;
+  border-color: #fff;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
   color: #fff;
   background-color: #fff;
-  border-color: #1861ac;
+  border-color: #fff;
 }
 
 
@@ -104,10 +121,10 @@ html {
 
 
 .border-top {
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid #fff;
 }
 .border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #fff;
 }
 
 .box-shadow {
@@ -126,9 +143,9 @@ html {
 }
 
 body {
-
+   margin:0;
   margin-bottom: 60px;
-  background-color: #1b6ec2;
+  background-color: #fff;
 }
 
 

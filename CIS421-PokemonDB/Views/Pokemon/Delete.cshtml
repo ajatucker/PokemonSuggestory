@@ -11,49 +11,20 @@
     <h4>Pokemon</h4>
     <hr />
     <dl class="row">
+  
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.pokemonNumber)
+            @Html.DisplayNameFor(model => model.pName)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.pokemonNumber)
+            @Html.DisplayFor(model => model.pName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.pDesc)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.pDesc)
         </dd>
 
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.pokemonName)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.pokemonName)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.pokemonDesc)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.pokemonDesc)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.pokemonType)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.pokemonType)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.priorEvol)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.priorEvol)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.nextEvol)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.nextEvol)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.imgPath)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.imgPath)
-        </dd>
     </dl>
     
     <form asp-action="Delete">
