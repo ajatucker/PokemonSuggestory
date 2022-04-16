@@ -8,7 +8,9 @@ namespace CIS421_PokemonDB.Models
     public class Pokemon
     {
         public int id { get; set; }
+        public int pokemonNumber { get; set; }
         public string pokemonName { get; set; }
+        public string pokemonDesc { get; set; }
         public string pokemonType { get; set; }
         public int priorEvol { get; set; }
         public int nextEvol { get; set; }

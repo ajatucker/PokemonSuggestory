@@ -15,7 +15,9 @@ namespace CIS421_PokemonDB.Migrations
                 {   
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    pokemonNumber = table.Column<int>(type: "int", nullable: false),
                     pokemonName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    pokemonDesc = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     pokemonType = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     priorEvol = table.Column<int>(type: "int", nullable: true),
                     nextEvol = table.Column<int>(type: "int", nullable: true),
