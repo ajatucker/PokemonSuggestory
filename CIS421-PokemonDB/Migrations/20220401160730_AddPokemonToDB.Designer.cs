@@ -26,14 +26,14 @@ namespace CIS421_PokemonDB.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("imgPath")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("nextEvol")
+                    
+                    b.Property<int>("pokemonNumber")
                         .HasColumnType("int");
 
                     b.Property<string>("pokemonName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("pokemonDesc")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("pokemonType")
@@ -41,6 +41,14 @@ namespace CIS421_PokemonDB.Migrations
 
                     b.Property<int>("priorEvol")
                         .HasColumnType("int");
+
+                    b.Property<int>("nextEvol")
+                        .HasColumnType("int");
+
+                    b.Property<string>("imgPath")
+                        .HasColumnType("nvarchar(max)");
+
+
 
                     b.HasKey("id");
 
