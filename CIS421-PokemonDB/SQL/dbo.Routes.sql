@@ -5,4 +5,4 @@
     [spawnRate] INT NULL, 
     [firstAppearence] VARCHAR(20) NULL, 
     CONSTRAINT [FK_Routes_ToTable] FOREIGN KEY ([id]) REFERENCES [Pokemon]([id])
-)
+);
