@@ -36,17 +36,17 @@ namespace CIS421_PokemonDB.Migrations
                     b.Property<string>("pokemonDesc")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("pokemonType")
-                        .HasColumnType("nvarchar(max)");
+                    //b.Property<string>("pokemonType")
+                    //    .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("priorEvol")
-                        .HasColumnType("int");
+                    //b.Property<int>("priorEvol")
+                    //    .HasColumnType("int");
 
-                    b.Property<int>("nextEvol")
-                        .HasColumnType("int");
+                    //b.Property<int>("nextEvol")
+                    //    .HasColumnType("int");
 
-                    b.Property<string>("imgPath")
-                        .HasColumnType("nvarchar(max)");
+                    //b.Property<string>("imgPath")
+                    //    .HasColumnType("nvarchar(max)");
 
 
 

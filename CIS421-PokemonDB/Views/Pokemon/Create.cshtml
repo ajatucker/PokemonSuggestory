@@ -20,7 +20,7 @@
             <div class="form-group">
                 <label asp-for="pokemonNumber" class="control-label"></label>
                 <input asp-for="pokemonNumber" class="form-control" />
-                <span asp-validation-for="priorEvol" class="text-danger"></span>
+                <span asp-validation-for="pokemonNumber" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="pokemonName" class="control-label"></label>
@@ -30,9 +30,9 @@
             <div class="form-group">
                 <label asp-for="pokemonDesc" class="control-label"></label>
                 <input asp-for="pokemonDesc" class="form-control" />
-                <span asp-validation-for="priorEvol" class="text-danger"></span>
+                <span asp-validation-for="pokemonDesc" class="text-danger"></span>@*check these*@
             </div>
-            <div class="form-group">
+            @*<div class="form-group">
                 <label asp-for="pokemonType" class="control-label"></label>
                 <input asp-for="pokemonType" class="form-control" />
                 <span asp-validation-for="pokemonType" class="text-danger"></span>
@@ -51,7 +51,7 @@
                 <label asp-for="imgPath" class="control-label"></label>
                 <input asp-for="imgPath" class="form-control" />
                 <span asp-validation-for="imgPath" class="text-danger"></span>
-            </div>
+            </div>*@
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
