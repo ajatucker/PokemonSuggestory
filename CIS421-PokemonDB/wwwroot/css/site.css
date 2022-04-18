@@ -98,14 +98,14 @@ main {
 
 .btn-primary {
   color: #fff;
-  background-color: #fff;
+  background-color: firebrick;
   border-color: #fff;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #fff;
-  border-color: #fff;
+  color: firebrick;
+  background-color: firebrick;
+  border-color: firebrick;
 }
 
 
