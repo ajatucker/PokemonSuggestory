@@ -5,4 +5,5 @@
     [id] INT NULL, 
     CONSTRAINT [FK_Gym_ToPokemon] FOREIGN KEY ([id]) REFERENCES [Pokemon]([id]), 
     CONSTRAINT [FK_Gym_Leader] FOREIGN KEY ([tName]) REFERENCES [GymLeader]([tName])
+	ON DELETE CASCADE
 );
